@@ -1,0 +1,157 @@
+/* src/components/Doctor/DoctorSchedule.css */
+
+/* --- Container & Layout --- */
+.schedule-container {
+  display: flex;
+  gap: 20px;
+  height: calc(100vh - 100px); /* Fill screen minus header */
+  font-family: 'Inter', 'Roboto', sans-serif;
+}
+
+.calendar-card {
+  flex: 3;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+  border: 1px solid #f0f0f0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.action-panel {
+  flex: 1;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+  border: 1px solid #f0f0f0;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* --- Calendar Overrides --- */
+.rbc-calendar {
+  font-family: 'Inter', sans-serif !important;
+  color: #444;
+}
+
+.rbc-header {
+  padding: 12px 0 !important;
+  font-weight: 600 !important;
+  color: #666;
+  font-size: 13px;
+  text-transform: uppercase;
+  border-bottom: none !important;
+}
+
+.rbc-event {
+  background-color: #e8f0fe !important; /* Soft Blue */
+  color: #1967d2 !important; /* Strong Blue Text */
+  border: none !important;
+  border-left: 4px solid #1967d2 !important;
+  border-radius: 4px !important;
+  padding: 4px 8px !important;
+  font-size: 13px !important;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.rbc-today {
+  background-color: #fafafa !important;
+}
+
+.rbc-time-view {
+  border: none !important;
+}
+.rbc-time-header-content {
+  border-left: none !important;
+}
+.rbc-timeslot-group {
+  border-bottom: 1px solid #f7f7f7 !important;
+}
+.rbc-day-slot .rbc-time-column {
+  border-right: 1px solid #f0f0f0 !important;
+}
+
+/* --- Action Panel Elements --- */
+.panel-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #202124;
+  margin-bottom: 5px;
+}
+
+.panel-subtitle {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 15px;
+}
+
+.shift-card {
+  background: #f8f9fa;
+  border: 1px solid #eee;
+  padding: 15px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.shift-card:hover {
+  background: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  border-color: #1a73e8;
+}
+
+.icon-box {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.shift-info h4 { margin: 0 0 3px 0; font-size: 14px; color: #333; }
+.shift-info p { margin: 0; font-size: 12px; color: #777; }
+
+/* --- Custom Toolbar --- */
+.custom-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0 10px;
+}
+
+.nav-btn-group {
+  display: flex;
+  background: #f1f3f4;
+  border-radius: 8px;
+  padding: 3px;
+}
+
+.nav-btn {
+  background: transparent;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #5f6368;
+  cursor: pointer;
+}
+.nav-btn:hover { background: #e8eaed; color: #202124; }
+.nav-btn.active { background: white; color: #1a73e8; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+
+.current-date-label {
+  font-size: 18px;
+  font-weight: 700;
+  color: #3c4043;
+}

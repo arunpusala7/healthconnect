@@ -113,7 +113,7 @@ function BookAppointment({ onBookingComplete }) {
         endTime: formatTime(selectedSlot.endTime),
       });
 
-      toast.success("Appointment Booked! 🎉");
+      toast.success("Appointment Booked!");
       setConfirmedAppointment({
         ...res.data, 
         userName: "My Appointment" 

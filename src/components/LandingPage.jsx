@@ -20,7 +20,7 @@ function LandingPage() {
       try {
         setLoadingDoctors(true);
         setError(null);
-        const res = await fetch("http://localhost:8080/api/doctors/landing-page-doctors");
+        const res = await fetch("https://healthconnect-os-backend.onrender.com/api/doctors/landing-page-doctors");
         if (!res.ok) {
           throw new Error("Failed to load doctors");
         }

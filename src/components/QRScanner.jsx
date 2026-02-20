@@ -38,7 +38,7 @@ const QRScanner = () => {
         
         try {
             // Adjust port 8080 if your backend runs elsewhere
-            const response = await fetch(`http://localhost:8080/api/appointments/verify/${ticketId}`, {
+            const response = await fetch(`https://healthconnect-os-backend.onrender.com/api/appointments/verify/${ticketId}`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
